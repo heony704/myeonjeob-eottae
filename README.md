@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://google.com" title="면접어때">
+  <a href="https://myeonjeob-eottae.netlify.app/" title="면접어때">
     <img src="src/assets/readme_banner.png" alt="면접어때 배너" />
   </a>
 </div>
@@ -30,7 +30,7 @@
 
 **내 모습을 직접 확인하는 것, 그것이 가장 효과적인 면접 준비입니다.**
 
-[면접어때로 면접 시작하기 🧑‍💻](https://google.com)
+[면접어때로 면접 시작하기 🧑‍💻](https://myeonjeob-eottae.netlify.app/)
 
 ## 면접 연습하기
 
