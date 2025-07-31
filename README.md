@@ -9,12 +9,14 @@
 
 # 면접어때
 
-<img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black">
-<img src="https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white">
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white">
-<img src="https://img.shields.io/badge/React Router-CA4245?style=flat&logo=reactrouter&logoColor=white">
-<img src="https://img.shields.io/badge/Axios-5A29E4?style=flat&logo=axios&logoColor=white">
-<img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white">
+<div>
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black">
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white">
+  <img src="https://img.shields.io/badge/React Router-CA4245?style=flat&logo=reactrouter&logoColor=white">
+  <img src="https://img.shields.io/badge/Axios-5A29E4?style=flat&logo=axios&logoColor=white">
+  <img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white">
+</div>
 
 <br>
 
@@ -105,4 +107,4 @@ pnpm start
 
 ## 문의하기
 
-문의는 이슈 탭 혹은 이메일 `heony704@gmail.com`을 통해 보내주세요.
+문의는 [이슈 탭](https://github.com/heony704/myeonjeob-eottae/issues) 혹은 이메일 `heony704@gmail.com`을 통해 보내주세요.
