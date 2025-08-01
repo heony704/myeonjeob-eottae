@@ -5,7 +5,6 @@
 </div>
 
 <br>
-<br>
 
 # 면접어때
 
@@ -32,6 +31,8 @@
 
 [면접어때로 면접 시작하기 🧑‍💻](https://myeonjeob-eottae.netlify.app/)
 
+<br>
+
 ## 면접 연습하기
 
 ### 실제 면접과 유사한 환경에서 연습하세요.
@@ -54,6 +55,8 @@
 몰랐던 습관을 발견하고, 더 나은 면접을 준비하세요.
 
 <div align="center"><img src="src/assets/feature3.gif"></div>
+
+<br>
 
 ## 프로젝트 구조
 
@@ -90,6 +93,8 @@
 
 - 앱의 진입점
 
+<br>
+
 ## 로컬에서 직접 실행하기
 
 ### 1. 원격 저장소를 복제하여 설치합니다.
@@ -105,6 +110,10 @@ cd myeonjeob-eottae
 pnpm start
 ```
 
+<br>
+
 ## 문의하기
 
 문의는 [이슈 탭](https://github.com/heony704/myeonjeob-eottae/issues) 혹은 이메일 `heony704@gmail.com`을 통해 보내주세요.
+
+<br><br><br>
