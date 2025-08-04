@@ -1,25 +1,35 @@
+import { useState } from "react";
 import { Button, LinkButton } from "@/ui";
 import { useInterviewMode } from "@/context/interviewMode";
 import { useQuestion } from "@/context/question";
 import { useRecord } from "@/context/record";
+import { useMedia } from "@/context/media";
 import useVideo from "@/hooks/useVideo";
 
 import RecordScreen from "./RecordScreen";
 import RecordTimestamp from "./RecordTimestamp";
 
 function InterviewExit() {
-  const { recordURL } = useRecord();
+  const [isRestartLoading, setIsRestartLoading] = useState<boolean>(false);
+  const { startRecording, recordURL } = useRecord();
+  const { videoRef, moveTime, currentTime } = useVideo();
+  const { setInterviewMode } = useInterviewMode();
+  const { resetQuestion } = useQuestion();
+  const { toggleAudioAndVideo } = useMedia();
+
   const isRecordExist = recordURL !== null;
 
-  const { videoRef, moveTime, currentTime } = useVideo();
+  const retryInterview = async () => {
+    setIsRestartLoading(true);
 
-  const { setInterviewMode } = useInterviewMode();
-
-  const { resetQuestion } = useQuestion();
-
-  const retryInterview = () => {
-    setInterviewMode("setup");
-    resetQuestion();
+    try {
+      await toggleAudioAndVideo();
+      await startRecording();
+      resetQuestion();
+      setInterviewMode("call");
+    } finally {
+      setIsRestartLoading(false);
+    }
   };
 
   return (
@@ -38,6 +48,7 @@ function InterviewExit() {
           variant="outline"
           className="h-10 rounded-full"
           onClick={retryInterview}
+          isLoading={isRestartLoading}
         >
           면접 다시 참여하기
         </Button>
