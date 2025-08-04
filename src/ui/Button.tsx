@@ -1,6 +1,9 @@
+import { Spinner } from "@/ui";
+
 type Variant = "basic" | "outline";
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variant;
+  isLoading?: boolean;
 }
 
 const VARIANT_STYLE: Record<Variant, string> = {
@@ -14,14 +17,16 @@ function Button({
   variant = "basic",
   className = "",
   children,
+  isLoading = false,
   ...rest
 }: Props) {
   return (
     <button
-      className={`${className} ${VARIANT_STYLE[variant]} flex cursor-pointer items-center justify-center px-6 transition-colors disabled:pointer-events-none disabled:bg-gray-400`}
+      className={`${className} ${VARIANT_STYLE[variant]} ${isLoading ? "pointer-events-none" : ""} flex cursor-pointer items-center justify-center gap-2 px-6 transition-colors disabled:pointer-events-none disabled:bg-gray-400`}
       {...rest}
     >
       {children}
+      {isLoading && <Spinner className="h-[1em] w-[1em]" />}
     </button>
   );
 }
