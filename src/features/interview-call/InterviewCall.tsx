@@ -49,13 +49,17 @@ function InterviewCall() {
   return (
     <main className="flex h-screen w-full flex-col justify-between overflow-hidden bg-gray-950">
       <div className="relative mx-4 mt-4 flex grow items-center justify-center">
-        <RecordingTime />
-
         <div
-          className={`${isSidePannelOpen ? "mr-[376px]" : ""} flex gap-4 transition-all duration-500`}
+          className={`${isSidePannelOpen ? "mr-[376px]" : ""} relative flex h-full items-center justify-center transition-all duration-500`}
         >
-          <InterviewerScreen />
-          <IntervieweeScreen />
+          <RecordingTime />
+
+          <div className="flex gap-4">
+            <InterviewerScreen />
+            <IntervieweeScreen />
+          </div>
+
+          <Caption open={isCaptionOpen} text={currentQuestion} />
         </div>
 
         <InterviewSidePannel
@@ -63,8 +67,6 @@ function InterviewCall() {
           open={isSidePannelOpen}
           onClose={closeSidePannel}
         />
-
-        <Caption open={isCaptionOpen} text={currentQuestion} />
       </div>
 
       <div className="mx-3 flex h-[80px] items-center justify-between">
