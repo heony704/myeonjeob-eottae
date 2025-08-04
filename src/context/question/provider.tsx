@@ -62,7 +62,7 @@ function QuestionProvider({ children }: React.PropsWithChildren) {
     });
   }, []);
 
-  const reset = useCallback(() => {
+  const resetQuestion = useCallback(() => {
     setCurrentQuestionIndex(0);
     setQuestionHistories([]);
   }, []);
@@ -80,7 +80,7 @@ function QuestionProvider({ children }: React.PropsWithChildren) {
       prevQuestion,
       questionHistories,
       addQuestionHistory,
-      reset,
+      resetQuestion,
     }),
     [
       questions,
@@ -94,7 +94,7 @@ function QuestionProvider({ children }: React.PropsWithChildren) {
       prevQuestion,
       questionHistories,
       addQuestionHistory,
-      reset,
+      resetQuestion,
     ],
   );
 

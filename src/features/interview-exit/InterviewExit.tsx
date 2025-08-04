@@ -15,11 +15,11 @@ function InterviewExit() {
 
   const { setInterviewMode } = useInterviewMode();
 
-  const { reset } = useQuestion();
+  const { resetQuestion } = useQuestion();
 
   const retryInterview = () => {
     setInterviewMode("setup");
-    reset();
+    resetQuestion();
   };
 
   return (

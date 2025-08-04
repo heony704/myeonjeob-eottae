@@ -13,7 +13,7 @@ interface QuestionContextValue {
   prevQuestion: () => void;
   questionHistories: QuestionHistory[];
   addQuestionHistory: (history: QuestionHistory) => void;
-  reset: () => void;
+  resetQuestion: () => void;
 }
 
 export const QuestionContext = createContext<QuestionContextValue | null>(null);
