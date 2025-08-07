@@ -33,11 +33,11 @@ function InterviewExit() {
   };
 
   return (
-    <main className="flex h-screen flex-col items-center gap-10 p-6 pt-[100px]">
+    <main className="flex h-screen flex-col items-center gap-10 p-6 pt-22">
       <h2 className="text-4xl">회의에서 나왔음</h2>
 
       {isRecordExist && (
-        <div className="flex gap-5">
+        <div className="flex w-full max-w-7xl gap-5">
           <RecordScreen videoRef={videoRef} />
           <RecordTimestamp currentTime={currentTime} moveVideoTime={moveTime} />
         </div>
